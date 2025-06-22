@@ -11,7 +11,17 @@ class UserController extends Controller
     }
 
     public function show($user){
-        return 'Tanlangan user ' . $user;
+        $user += 1000;
+        // return 'Tanlangan user ' . $user;
+
+        // return view('users.show', [
+        //     'name' => 'Oybek',
+        //     'id' => $user
+        // ]);
+        // yoki
+        return view('users.show')
+        ->with('name', 'Oybek')
+        ->with('id', $user);
     }
 
     public function create(){
