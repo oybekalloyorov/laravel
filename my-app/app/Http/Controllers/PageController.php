@@ -9,4 +9,10 @@ class PageController extends Controller
     public function main(){
         return view('main');
     }
+    public function welcome(){
+        return view('welcome', [
+            'name' => '<script>alert("Salom")</script>',
+            'records' => [1,2,3,4,5,5],
+        ]);
+    }
 }

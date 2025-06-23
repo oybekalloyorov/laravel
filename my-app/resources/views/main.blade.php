@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Klean - Cleaning Services</title>
+    <title>@yield('title', 'Welcome')</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -725,6 +725,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    @yield('content')
 </body>
 
 </html>
