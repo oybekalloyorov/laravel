@@ -7,7 +7,18 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function index(){
-        return 'Bu narsalarni ro`yhati';
+        // return response('Bu narsalarni ro`yhati', 201, ['X-Header-One' => 'Header Value Testing']);
+        // yoki
+        // return response('Bu narsalarni ro`yhati', 201)->header('X-Header-One', 'Header Value Testing');
+
+        // redirect
+        // return redirect('users/create');
+
+        // Json qaytarish
+        return response()->json([
+            'name' => 'Oybek',
+            'state' => 'Uz',
+        ]);
     }
 
     // public function show(Request $request, $user){
