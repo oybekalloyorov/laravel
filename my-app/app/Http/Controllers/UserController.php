@@ -10,6 +10,7 @@ class UserController extends Controller
         return 'Bu narsalarni ro`yhati';
     }
 
+    // public function show(Request $request, $user){
     public function show($user){
         $user += 1000;
         // return 'Tanlangan user ' . $user;
@@ -19,6 +20,7 @@ class UserController extends Controller
         //     'id' => $user
         // ]);
         // yoki
+        // dd($request->requestUri);
         return view('users.show')
         ->with('name', 'Oybek')
         ->with('id', $user);
@@ -26,6 +28,21 @@ class UserController extends Controller
 
     public function create(){
         return view('users.create');
+    }
+
+    public function store(Request $request){
+        // dd($request);
+        // dd($request->input('name'));
+        // dd($request->input('email'));
+        // dd($request->all());
+        dd($request->email);
+
+        // if ($request->has('name')) // inputdan kelayotgan name bor bolsa ishlaydi
+        // {
+        //     echo "Yes";
+        // }else{
+        //     echo 'No';
+        // }
     }
 
     public function edit($user_id){

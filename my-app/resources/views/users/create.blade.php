@@ -8,5 +8,11 @@
 </head>
 <body>
     <h1>Create New User</h1>
+    <form action="/user-create" method="POST">
+        @csrf
+        <input type="text" name="name">
+        <input type="email" name="email">
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
